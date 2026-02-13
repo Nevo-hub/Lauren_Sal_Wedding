@@ -408,7 +408,12 @@ rsvpForm.addEventListener('submit', async (e) => {
       body: JSON.stringify(formData)
     });
 
-    const result = await response.json();
+    let result = {};
+    try {
+      result = await response.json();
+    } catch (e) {
+      // n8n may return empty response - fall back to status check
+    }
 
     if (result.status === 'success' || response.ok) {
       rsvpForm.reset();
@@ -661,4 +666,3 @@ window.addEventListener('load', () => {
   // Initialize any additional animations
   console.log('Wedding website loaded successfully! 🎉');
 });
-
