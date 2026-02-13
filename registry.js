@@ -8,7 +8,7 @@
 // Replace YOUR_N8N_DOMAIN with your actual n8n instance URL.
 // Example: 'https://your-n8n.app.n8n.cloud/webhook'
 // -------------------------------------------------------
-const API_URL = 'https://YOUR_N8N_DOMAIN/webhook';
+const API_URL = 'https://nevo60.app.n8n.cloud/webhook';
 const YOUR_PAYPAL_ME_LINK = 'https://www.paypal.com/paypalme/YOURUSERNAME'; // Update with real link
 
 // Fund Configuration
@@ -413,4 +413,5 @@ document.querySelectorAll('.store-card, .experience-card').forEach(el => {
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
   observer.observe(el);
 });
+
 
